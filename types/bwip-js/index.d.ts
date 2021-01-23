@@ -12,6 +12,7 @@ import { IncomingMessage as Request, ServerResponse as Response } from 'http';
 declare namespace BwipJs {
     export function loadFont(fontName:string, sizeMulti: number, fontFile: string): void;
     export function toBuffer(opts: ToBufferOptions, callback:(err: string|Error, png: Buffer) => void): void;
+    export function toBuffer(opts: ToBufferOptions): Promise<Buffer>;
     export function toCanvas(canvas: string | HTMLCanvasElement, opts: ToBufferOptions): HTMLCanvasElement;
     interface ToBufferOptions {
         bcid: string;
